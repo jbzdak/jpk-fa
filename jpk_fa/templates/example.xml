@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:JPK xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/" xmlns:kck="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2013/05/23/eD/KodyCECHKRAJOW/" xmlns:tns="http://jpk.mf.gov.pl/wzor/2016/03/09/03095/">
+  <tns:Naglowek>
+    <tns:KodFormularza kodSystemowy="JPK_FA (1)" wersjaSchemy="1-0">JPK_FA</tns:KodFormularza>
+    <tns:WariantFormularza>1</tns:WariantFormularza>
+    <tns:CelZlozenia>1</tns:CelZlozenia>
+    <tns:DataWytworzeniaJPK>2018-08-04T21:48:59</tns:DataWytworzeniaJPK>
+    <tns:DataOd>2018-08-01</tns:DataOd>
+    <tns:DataDo>2018-08-31</tns:DataDo>
+    <tns:DomyslnyKodWaluty>PLN</tns:DomyslnyKodWaluty>
+    <tns:KodUrzedu>0402</tns:KodUrzedu>
+  </tns:Naglowek>
+  <tns:Podmiot1>
+    <tns:IdentyfikatorPodmiotu>
+      <etd:NIP>4867327444</etd:NIP>
+      <etd:PelnaNazwa>Sprzedawca</etd:PelnaNazwa>
+    </tns:IdentyfikatorPodmiotu>
+    <tns:AdresPodmiotu>
+      <etd:KodKraju>PL</etd:KodKraju>
+      <etd:Ulica>Sprzedwca Ulica</etd:Ulica>
+      <etd:Miejscowosc>Sprzedawca Miasto</etd:Miejscowosc>
+      <etd:KodPocztowy>00-001</etd:KodPocztowy>
+    </tns:AdresPodmiotu>
+  </tns:Podmiot1>
+  <tns:Faktura typ="G">
+    <tns:P_1>2018-08-04</tns:P_1>
+    <tns:P_2A>01/08/2018</tns:P_2A>
+    <tns:P_3A>Nabywca</tns:P_3A>
+    <tns:P_3B>Nabywca ulica, 11-134 Nabywca miasto</tns:P_3B>
+    <tns:P_3C>Sprzedawca</tns:P_3C>
+    <tns:P_3D>Sprzedwca Ulica, 00-001 Sprzedawca Miasto</tns:P_3D>
+    <tns:P_4B>4867327444</tns:P_4B>
+    <tns:P_5B>4443652436</tns:P_5B>
+    <tns:P_13_6>1000.00</tns:P_13_6>
+    <tns:P_15>1000.00</tns:P_15>
+    <tns:P_16>false</tns:P_16>
+    <tns:P_17>false</tns:P_17>
+    <tns:P_18>false</tns:P_18>
+    <tns:P_19>false</tns:P_19>
+    <tns:P_20>false</tns:P_20>
+    <tns:P_21>false</tns:P_21>
+    <tns:P_23>false</tns:P_23>
+    <tns:P_106E_2>false</tns:P_106E_2>
+    <tns:P_106E_3>false</tns:P_106E_3>
+    <tns:RodzajFaktury>VAT</tns:RodzajFaktury>
+  </tns:Faktura>
+  <tns:FakturaCtrl>
+    <tns:LiczbaFaktur>1</tns:LiczbaFaktur>
+    <tns:WartoscFaktur>1000.00</tns:WartoscFaktur>
+  </tns:FakturaCtrl>
+  <tns:StawkiPodatku>
+    <tns:Stawka1>0.23</tns:Stawka1>
+    <tns:Stawka2>0.08</tns:Stawka2>
+    <tns:Stawka3>0.05</tns:Stawka3>
+    <tns:Stawka4>0.0</tns:Stawka4>
+    <tns:Stawka5>0.0</tns:Stawka5>
+  </tns:StawkiPodatku>
+  <tns:FakturaWiersz typ="G">
+    <tns:P_2B>01/08/2018</tns:P_2B>
+    <tns:P_7>test</tns:P_7>
+    <tns:P_8A>usł.</tns:P_8A>
+    <tns:P_8B>10</tns:P_8B>
+    <tns:P_9A>100.00</tns:P_9A>
+    <tns:P_9B>1000.00</tns:P_9B>
+    <tns:P_11>1000.00</tns:P_11>
+    <tns:P_12>0</tns:P_12>
+  </tns:FakturaWiersz>
+  <tns:FakturaWierszCtrl>
+    <tns:LiczbaWierszyFaktur>1</tns:LiczbaWierszyFaktur>
+    <tns:WartoscWierszyFaktur>1000.00</tns:WartoscWierszyFaktur>
+  </tns:FakturaWierszCtrl>
+</tns:JPK>

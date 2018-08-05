@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:JPK xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/" xmlns:kck="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2013/05/23/eD/KodyCECHKRAJOW/" xmlns:tns="http://jpk.mf.gov.pl/wzor/2016/03/09/03095/">
+  <tns:Naglowek>
+    <tns:KodFormularza kodSystemowy="JPK_FA (1)" wersjaSchemy="1-0">JPK_FA</tns:KodFormularza>
+    <tns:WariantFormularza>1</tns:WariantFormularza>
+    <tns:CelZlozenia>1</tns:CelZlozenia>
+    <tns:DataWytworzeniaJPK>{{ now.isoformat() }}</tns:DataWytworzeniaJPK>
+    <tns:DataOd>{{header.date_from}}</tns:DataOd>
+    <tns:DataDo>{{header.date_to}}</tns:DataDo>
+    <tns:DomyslnyKodWaluty>{{ header.currency }}</tns:DomyslnyKodWaluty>
+    <tns:KodUrzedu>{{header.tax_authority_code}}</tns:KodUrzedu>
+  </tns:Naglowek>
+  {% include "seller.xml" %}
+  {% for invoice in invoices %}
+    {% include "invoice.xml" %}
+  {% endfor %}
+  <tns:FakturaCtrl>
+    <tns:LiczbaFaktur>{{ invoice_checksum.invoice_count }}</tns:LiczbaFaktur>
+    <tns:WartoscFaktur>{{ invoice_checksum.grand_total }}</tns:WartoscFaktur>
+  </tns:FakturaCtrl>
+  <tns:StawkiPodatku>
+    <tns:Stawka1>{{ tax_rates[0] }}</tns:Stawka1>
+    <tns:Stawka2>{{ tax_rates[1] }}</tns:Stawka2>
+    <tns:Stawka3>{{ tax_rates[2] }}</tns:Stawka3>
+    <tns:Stawka4>{{ tax_rates[3] }}</tns:Stawka4>
+    <tns:Stawka5>{{ tax_rates[4] }}</tns:Stawka5>
+  </tns:StawkiPodatku>
+  {% for line in lines %}
+    {% include "line.xml" %}
+  {% endfor %}
+  <tns:FakturaWierszCtrl>
+    <tns:LiczbaWierszyFaktur>{{ lines_checksum.line_count }}</tns:LiczbaWierszyFaktur>
+    <tns:WartoscWierszyFaktur>{{ lines_checksum.trand_total_pre_tax }}</tns:WartoscWierszyFaktur>
+  </tns:FakturaWierszCtrl>
+</tns:JPK>

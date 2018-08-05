@@ -1,0 +1,10 @@
+
+<tns:FakturaWiersz typ="G">
+    <tns:P_2B>{{ line.invoice_no }}</tns:P_2B>
+    <tns:P_7>{{ line.name }}</tns:P_7>
+    <tns:P_8A>{{ line.unit }}</tns:P_8A>
+    <tns:P_8B>{{ line.quantity }}</tns:P_8B>
+    <tns:P_9A>{{ line.unit_price_pre_tax }}</tns:P_9A>
+    <tns:P_11>{{ line.total_net_price }}</tns:P_11>
+    <tns:P_12>{{ line.tax_rate_percent }}</tns:P_12>
+</tns:FakturaWiersz>

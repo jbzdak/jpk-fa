@@ -1,0 +1,17 @@
+<tns:Podmiot1>
+    <tns:IdentyfikatorPodmiotu>
+        <etd:NIP>{{ seller.tax_id }}</etd:NIP>
+        <etd:PelnaNazwa>{{ seller.name }}</etd:PelnaNazwa>
+    </tns:IdentyfikatorPodmiotu>
+    <tns:AdresPodmiotu>
+        <etd:KodKraju>PL</etd:KodKraju>
+        <etd:Ulica>{{ seller.address.street }}</etd:Ulica>
+        <etd:Miejscowosc>{{ seller.address.city }}</etd:Miejscowosc>
+        <etd:KodPocztowy>{{ seller.address.postcode }}</etd:KodPocztowy>
+        <etd:Wojewodztwo>{{ seller.address.voivoidship }}</etd:Wojewodztwo>
+        <etd:Powiat>{{ seller.address.powiat }}</etd:Powiat>
+        <etd:Gmina>{{ seller.address.gmina }}</etd:Gmina>
+        <etd:Miejscowosc>{{ seller.address.locality }}</etd:Miejscowosc>
+        <etd:Poczta>{{ seller.address.post }}</etd:Poczta>
+    </tns:AdresPodmiotu>
+</tns:Podmiot1>

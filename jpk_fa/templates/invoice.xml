@@ -1,0 +1,36 @@
+<tns:Faktura typ="G">
+    <tns:P_1>{{ invoice.issue_date.isoformat() }}</tns:P_1>
+    <tns:P_2A>{{ invoice.invoice_no }}</tns:P_2A>
+    <tns:P_3A>{{ invoice.buyer.name }}</tns:P_3A>
+    <tns:P_3B>{{ invoice.buyer.address }}</tns:P_3B>
+
+    <tns:P_3C>{{ invoice.seller.name }}</tns:P_3C>
+    <tns:P_3D>{{ invoice.seller.address_line }}</tns:P_3D>
+    <tns:P_4B>{{ invoice.seller.tax_id }}</tns:P_4B>
+    {% if invoice.buyer.buyer_eu_tax_id %}
+    {% if invoice.buyer.buyer_eu_tax_id.country_code %}
+        <tns:P_5A>{{ invoice.buyer.buyer_eu_tax_id.country_code }}</tns:P_5A>
+    {% endif %}
+    <tns:P_5B>{{ invoice.buyer.buyer_eu_tax_id.tax_id }}</tns:P_5B>
+    {% endif %}
+
+    {% for tax_line in invoice.tax_lines %}
+        <tns:{{ tax_line.field_name }}>{{ tax_line.total_pre_tax }}</tns:{{ tax_line.field_name }}>
+        {% if tax_line.tax_field_names %}
+            <tns:{{ tax_line.tax_field_names }}>{{ tax_line.total_tax }}</tns:{{ tax_line.tax_field_names }}>
+        {% endif %}
+    {% endfor %}
+
+    <tns:P_15>{{ invoice.total_after_tax }}</tns:P_15>
+
+    <tns:P_16>false</tns:P_16>
+    <tns:P_17>false</tns:P_17>
+    <tns:P_18>false</tns:P_18>
+    <tns:P_19>false</tns:P_19>
+    <tns:P_20>false</tns:P_20>
+    <tns:P_21>false</tns:P_21>
+    <tns:P_23>false</tns:P_23>
+    <tns:P_106E_2>false</tns:P_106E_2>
+    <tns:P_106E_3>false</tns:P_106E_3>
+    <tns:RodzajFaktury>VAT</tns:RodzajFaktury>
+</tns:Faktura>

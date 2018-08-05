@@ -1,0 +1,21 @@
+# Tax rates array, needs to be 5 elements, elements 3 and 4 are reserved for
+# future use by the ministry
+tax_rates: [23, 8, 5, 0, 0]
+seller:
+  # Seller NIP number
+  tax_id: 123
+  # Seller full name
+  name: Seller Name
+  # Seller address (I didn't want to generate address from below dict)
+  address_line: Seller Address
+  address:
+    #  Seller address parts
+    street: Seller Street
+    city: Seller City
+    voivoidship: Mazowieckie
+    powiat: Warszawa
+    gmina: Warszawa
+    locality: Miejscowość
+    postcode: 00-001
+    homeNumber: 134
+    post: Poczta
