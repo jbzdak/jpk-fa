@@ -44,6 +44,8 @@ Uwaga: dla każdego normalnego człowieka skorzystanie z normalnego programu do 
    VAT zbiorczo
 3. Do każdej faktury generujesz JPK zaraz po wystawieniu a potem US wysyłasz 
    paczkę plików JPK jak poprosi. 
+4. Pliki JPK wygeneruejsz tylko to prostej działalnosci która wysatwia faktury, 
+   nie ma wsparcia do wstecznego VAT, metody kasowej itp. 
 
 ## Dane źródłowe. 
 
