@@ -45,7 +45,7 @@ invoices:
     # Tax Id is optional if buyer has none (personal buyer and/or from outside EU)
     buyer_eu_tax_id:
       country_code: PL
-      tax_id: 1234
+      tax_id: Buyer Nip
 
   # invoice lines
   lines:

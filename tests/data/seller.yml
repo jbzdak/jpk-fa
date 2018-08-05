@@ -3,7 +3,7 @@
 tax_rates: [23, 8, 5, 0, 0]
 seller:
   # Seller NIP number
-  tax_id: 123
+  tax_id: Seller NIP
   # Seller full name
   name: Seller Name
   # Seller address (I didn't want to generate address from below dict)

@@ -16,8 +16,8 @@
 
     {% for tax_line in invoice.tax_lines %}
         <tns:{{ tax_line.field_name }}>{{ tax_line.total_pre_tax }}</tns:{{ tax_line.field_name }}>
-        {% if tax_line.tax_field_names %}
-            <tns:{{ tax_line.tax_field_names }}>{{ tax_line.total_tax }}</tns:{{ tax_line.tax_field_names }}>
+        {% if tax_line.tax_field_name %}
+            <tns:{{ tax_line.tax_field_name }}>{{ tax_line.total_tax }}</tns:{{ tax_line.tax_field_name }}>
         {% endif %}
     {% endfor %}
 
