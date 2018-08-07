@@ -49,6 +49,11 @@ def default_type_map():
   })
 
 
+
+class FieldParsingException(Exception):
+  pass
+
+
 MISSING = object()
 
 @dataclasses.dataclass()
@@ -157,10 +162,15 @@ class DataclassParser(object):
 
     transformer = self.get_transformer(field)
 
-    if field.is_sequence:
-      response = [transformer(item) for item in raw_value]
-    else:
-      response = transformer(raw_value)
+    try:
+      if field.is_sequence:
+        response = [transformer(item) for item in raw_value]
+      else:
+        response = transformer(raw_value)
+    except FieldParsingException as e:
+      raise
+    except Exception as e:
+      raise FieldParsingException(f"Field {field.name} unparseable at path {self.path}") from e
 
     self.init_kwargs[field.name] = response
 

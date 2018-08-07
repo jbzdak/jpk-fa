@@ -118,12 +118,12 @@ class Invoice(object):
   invoice_no: str
   issue_date: datetime.date
   buyer: Buyer
-  service_date: datetime.date
   lines: typing.Sequence[InvoiceLine]
 
   total_after_tax: decimal.Decimal
   tax_lines: typing.Sequence[TaxLine]
 
+  service_date: datetime.date = None
   seller: Seller = None
 
 

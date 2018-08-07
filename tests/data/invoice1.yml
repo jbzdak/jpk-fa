@@ -30,15 +30,15 @@ invoices:
   # Grand total for invoice AFTER tax
   # If your invoice is in other Currency than PLN you should convert that to PLN
   # here
-  total_after_tax: 246
+  total_after_tax: 2230
 
   # Tax lines for invoice
   tax_lines:
     # Reference to tax_rates list. -1 means tax rate equal to 0%, 0 means 23%, 1 means 8%...
   - tax_rate_id: -1
-    total_pre_tax: 123
+    total_pre_tax: 1000
   - tax_rate_id: 0
-    total_pre_tax: 100
+    total_pre_tax: 1000
   buyer:
     name: Buyer name string
     address: Buer address string
@@ -54,18 +54,18 @@ invoices:
     # Unit of quantity
     unit: hours
     # Quantity
-    quantity: 1
+    quantity: 10
     # Unit price before tax
-    unit_price_pre_tax: 123
+    unit_price_pre_tax: 100
     # Unit price after tax
-    total_pre_tax: 123
+    total_pre_tax: 1000
     # Reference to tax_rates list. -1 means tax rate equal to 0%, 0 means 23%, 1 means 8%...
     tax_rate: -1
   - name: Consulting
     unit: hours
     quantity: 1
-    unit_price_pre_tax: 100
-    total_pre_tax: 100
+    unit_price_pre_tax: 1000
+    total_pre_tax: 1000
     total_tax: 23
     tax_rate: 1
 
